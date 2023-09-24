@@ -1,6 +1,6 @@
 ﻿namespace Flex.Domain;
 
-public interface IEntity
+public interface IEntity<T> where T : notnull
 {
-    int Id { get; }
+    T Id { get; }
 }

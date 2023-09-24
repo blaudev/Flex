@@ -1,8 +1,6 @@
 ﻿namespace Flex.Domain;
 
-public class Entity : IEntity
+public abstract class Entity<T> : IEntity<T> where T : notnull
 {
-    public int Id { get; private set; }
-
-    protected Entity() { }
+    public T Id { get; init; } = default!;
 }
